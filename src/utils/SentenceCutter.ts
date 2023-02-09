@@ -51,7 +51,7 @@ export class SentenceCutter {
       result = result.split(separator.cutKey).join(" ");
     });
 
-    result = result.split(" ").filter((element: string) => !!element);
+    result = result.split(/ |\n/).filter((element: string) => !!element);
 
     return result;
   }
